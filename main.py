@@ -1,12 +1,14 @@
+import os
+from dotenv import load_dotenv
 import telebot
 import requests
 import random
 from telebot import types
 from dictionaries import idinah_list, hello_list
 
-
-TELEGRAM_TOKEN = '7266703224:AAHLwpIqBE-Rd9NVkSmD-bSD0IR6clmdSOQ'
-API_KEY = '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'
+load_dotenv()
+TELEGRAM_TOKEN = os.getenv('TELEGRAM_TOKEN')
+API_KEY = os.getenv('API_KEY')
 API_URL = 'https://openrouter.ai/api/v1/chat/completions'
 MODEL = "mistralai/mistral-7b-instruct"
 
