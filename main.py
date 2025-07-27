@@ -86,5 +86,6 @@ def check_input_messages(message):
 
 
 print("Бот запущен!")
-mtvzg_bot.polling(none_stop=True)
+if __name__ == '__main__':
+    mtvzg_bot.polling(none_stop=True)
 
